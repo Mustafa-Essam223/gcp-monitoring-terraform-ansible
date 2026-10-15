@@ -1,0 +1,9 @@
+# Fill in the public IPs from `terraform output`
+[monitoring]
+monitoring-server ansible_host=<MONITORING_PUBLIC_IP> internal_ip=10.0.0.10
+
+[target]
+target-server ansible_host=<TARGET_PUBLIC_IP> internal_ip=10.0.0.2
+
+[all:vars]
+ansible_user=<your-ssh-user>

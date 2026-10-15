@@ -1,0 +1,11 @@
+- name: Target Server
+  hosts: target-server
+  become: true 
+  roles: 
+    - node_exporter
+- name: Monitoring Server 
+  hosts: monitoring-server
+  become: true 
+  roles: 
+    - prometheus
+    - grafana

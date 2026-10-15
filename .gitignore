@@ -1,0 +1,26 @@
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+crash.log
+
+# Ansible
+ansible/inventory.ini
+*.retry
+
+# Keys / secrets
+*.pem
+*.key
+.env
+
+
+### Possible improvements
+
+# - Remote Terraform state in a GCS bucket with locking
+# - Alertmanager with alert rules (CPU, memory, disk, target down)
+# - Reverse proxy with TLS in front of Grafana, and private IP-only access via IAP or VPN
+# - Grafana admin password from Ansible Vault, and dashboards provisioned as code
+# - Dynamic inventory (GCP plugin) so the IPs do not need to be copied by hand
+# - CI pipeline running `terraform validate`, `tflint` and `ansible-lint` on every push
+

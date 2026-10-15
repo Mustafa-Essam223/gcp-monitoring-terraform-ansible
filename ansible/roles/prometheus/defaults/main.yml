@@ -1,0 +1,2 @@
+prometheus_version: "2.53.2"
+prometheus_retention: "7d"
